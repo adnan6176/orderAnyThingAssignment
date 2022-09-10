@@ -1,0 +1,1192 @@
+{
+	"info": {
+		"_postman_id": "42df812d-a7c5-491f-893c-0732e19a3904",
+		"name": "orderAnything",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "catalouge",
+			"item": [
+				{
+					"name": "ViewItemInCatalogue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/catalogue",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"catalogue"
+							]
+						},
+						"description": "Api to get list of  <b>items</b> to the catalouge."
+					},
+					"response": [
+						{
+							"name": "ViewItemInCatalogue",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/catalogue",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"catalogue"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "248"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f8-3MoHwpwOgvsWXNTT5AMxBbz3S1U\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 20:02:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"3d84dbd7-021c-43f1-a03a-8640dea75f5c\",\n            \"name\": \"lays\",\n            \"category\": \"food\"\n        },\n        {\n            \"id\": \"d217fba0-7d59-425d-a0f7-456b62856ad9\",\n            \"name\": \"kurkare\",\n            \"category\": \"food\"\n        },\n        {\n            \"id\": \"ba044bf1-7d79-45f8-8dcd-ab95c57a29f9\",\n            \"name\": \"apple\",\n            \"category\": \"food\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "AddIteminCatalogue",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"apple\",\n    \"category\" :\"food\",\n    \"address\" : \"my address 3\",\n    \"lat\" :\"0.12\",\n    \"long\" : \"0.15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/catalogue/addItem",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"catalogue",
+								"addItem"
+							]
+						},
+						"description": "Api to add <b>items</b> to the catalouge by admin. As per requirement there is only one catalouge in product."
+					},
+					"response": [
+						{
+							"name": "AddIteminCatalogue",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"apple12\",\n    \"category\" :\"food\",\n    \"address\" : \"my address 3\",\n    \"lat\" :\"0.12\",\n    \"long\" : \"0.15\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/catalogue/addItem",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"catalogue",
+										"addItem"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "329"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"149-GkAzxT2x+pNctUsZg5j8wmgaDcA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 20:03:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"3d84dbd7-021c-43f1-a03a-8640dea75f5c\",\n            \"name\": \"lays\",\n            \"category\": \"food\"\n        },\n        {\n            \"id\": \"d217fba0-7d59-425d-a0f7-456b62856ad9\",\n            \"name\": \"kurkare\",\n            \"category\": \"food\"\n        },\n        {\n            \"id\": \"ba044bf1-7d79-45f8-8dcd-ab95c57a29f9\",\n            \"name\": \"apple\",\n            \"category\": \"food\"\n        },\n        {\n            \"id\": \"2498d562-cf5c-4355-8884-88c6a6b7b6a4\",\n            \"name\": \"apple12\",\n            \"category\": \"food\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "addItemToCart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzNzA2Y2E1Ny1hY2Q3LTRhNjctODI3OC0xZjJhYWU2ZjU4OTYiLCJzZXNzaW9uSWQiOiIwOTBiNDIzNS02NDBjLTQ5ZTgtYWM5My01ZTA4NWY5YmFiY2MiLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE2NjI4MDIyMDl9.9hHycd8X53-WUdOJv3WYdW2IxR-LCsv3mt5ZLwLfPiw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"itemId\" :\"d217fba0-7d59-425d-a0f7-456b62856ad9\",\n    \"quantity\" : \"10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/cart",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cart"
+							]
+						},
+						"description": "Api to add items to the cart of logged in user. There is only one cart supported for a user. \n\n\ninput:\n    itemId: id of item\n    quantity: number of item.\n\noutput: 200 if successfull.\n\nValidation:\ncheck for valid productId"
+					},
+					"response": [
+						{
+							"name": "addItemToCart",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"itemId\" :\"d217fba0-7d59-425d-a0f7-456b62856ad9\",\n    \"quantity\" : \"10\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/cart",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"cart"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-gutpSGAThR6CmA3shJLx46a8DEo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 20:03:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"adding item to cart\"\n}"
+						}
+					]
+				},
+				{
+					"name": "checkout  cart",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzNzA2Y2E1Ny1hY2Q3LTRhNjctODI3OC0xZjJhYWU2ZjU4OTYiLCJzZXNzaW9uSWQiOiIwOTBiNDIzNS02NDBjLTQ5ZTgtYWM5My01ZTA4NWY5YmFiY2MiLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE2NjI4MDIyMDl9.9hHycd8X53-WUdOJv3WYdW2IxR-LCsv3mt5ZLwLfPiw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/cart/checkout",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cart",
+								"checkout"
+							]
+						},
+						"description": "Api to checkout a cart of logged in user. Once checkout is down a order is created"
+					},
+					"response": [
+						{
+							"name": "checkout success case",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/cart/checkout",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"cart",
+										"checkout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "170"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa-9wx5Kgs83jalnI1qLs9c9B4TfBk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 20:03:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": [\n        {\n            \"item\": \"d217fba0-7d59-425d-a0f7-456b62856ad9\",\n            \"quantity\": 10,\n            \"order\": \"2f15098b-84e3-441b-97ae-417d850404d3\",\n            \"address\": \"my address 2\",\n            \"long\": 0.15,\n            \"lat\": 0.12\n        }\n    ]\n}"
+						},
+						{
+							"name": "checkout empty cart",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/cart/checkout",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"cart",
+										"checkout"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e-p+XYX9rfeUHNfkJYkDEpqeAxAKk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 20:03:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"status\": 400,\n        \"message\": \"emptyCart\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\" : \"9876543210\",\n    \"password\" :\"myPassword\",\n    \"role\" : \"customer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Case : Successful login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phone\" : \"9876543210\",\n    \"password\" :\"myPassword\",\n    \"role\" : \"customer\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/user/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "271"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10f-rtXVL6LKvdkBwNO0Rxc4eUB8ePo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 20:05:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"jwt\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzNzA2Y2E1Ny1hY2Q3LTRhNjctODI3OC0xZjJhYWU2ZjU4OTYiLCJzZXNzaW9uSWQiOiI3NzkzMTVhYy02M2Q2LTQ4NjEtYWU1YS00ZGE0MGYwOTM4MTciLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE2NjI4NDAzNDl9.nV_nFo9pDgTXr6KH-O-lV6LYmZSWybDW6ql6ugXrSeI\"\n}"
+						},
+						{
+							"name": "Case: Invalid username password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phone\" : \"9876543210\",\n    \"password\" :\"myPassworp\",\n    \"role\" : \"customer\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/user/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-Ktvo0bLRX8NY3cCzTBkPEKHO//Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 20:06:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"status\": 401,\n        \"message\": \"invalid username or password\"\n    }\n}"
+						},
+						{
+							"name": "case incorrect role",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phone\" : \"9876543210\",\n    \"password\" :\"myPassword\",\n    \"role\" : \"customedr\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/user/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5e-UMcsA5GtYzSN/JkiHULlXadzhTQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 20:09:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"status\": 422,\n        \"message\": \"\\\"role\\\" must be one of [customer, admin, deliveryPerson]\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "signup",
+			"item": [
+				{
+					"name": "signUpUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\" : \"1238923\",\n    \"password\" :\"myPassword\",\n    \"role\" : \"deliveryPerson\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/user/signUp",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"signUp"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "user already exist",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phone\" : \"1238923\",\n    \"password\" :\"myPassword\",\n    \"role\" : \"deliveryPerson\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/user/signUp",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"signUp"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "73"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"49-WA7+ZSSHLgrNSxJdWUJxz+FsBMk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 20:10:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"status\": 404,\n        \"message\": \"already registered as deliveryPerson\"\n    }\n}"
+						},
+						{
+							"name": "signUp with wrong role",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phone\" : \"1238923\",\n    \"password\" :\"myPassword\",\n    \"role\" : \"delivffferyPerson\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/user/signUp",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"signUp"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5e-UMcsA5GtYzSN/JkiHULlXadzhTQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 20:12:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"status\": 422,\n        \"message\": \"\\\"role\\\" must be one of [customer, admin, deliveryPerson]\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/order",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get list of all the order",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/order",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"order"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "941"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3ad-++7CiYyBqRLPPBp0mZ6w31HLEb8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 20:13:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"3112f107-36c9-4dad-9a5e-19467b5fa5d6\",\n            \"customer_id\": \"3706ca57-acd7-4a67-8278-1f2aae6f5896\",\n            \"delivert_partner_id\": \"3706ca57-acd7-4a67-8278-1f2aae6f5896\",\n            \"status\": \"DELIVERED\"\n        },\n        {\n            \"id\": \"bf8dcd58-6940-4934-8dd4-585becdfecc3\",\n            \"customer_id\": \"3706ca57-acd7-4a67-8278-1f2aae6f5896\",\n            \"delivert_partner_id\": null,\n            \"status\": \"TASK_CREATED\"\n        },\n        {\n            \"id\": \"5c1b16d5-29e7-4ef2-a9bf-582b90a15249\",\n            \"customer_id\": \"3706ca57-acd7-4a67-8278-1f2aae6f5896\",\n            \"delivert_partner_id\": null,\n            \"status\": \"TASK_CREATED\"\n        },\n        {\n            \"id\": \"bddbd919-c4b8-4566-8900-8081230d55a7\",\n            \"customer_id\": \"3706ca57-acd7-4a67-8278-1f2aae6f5896\",\n            \"delivert_partner_id\": null,\n            \"status\": \"TASK_CREATED\"\n        },\n        {\n            \"id\": \"2f15098b-84e3-441b-97ae-417d850404d3\",\n            \"customer_id\": \"3706ca57-acd7-4a67-8278-1f2aae6f5896\",\n            \"delivert_partner_id\": null,\n            \"status\": \"TASK_CREATED\"\n        },\n        {\n            \"id\": \"fd861c86-ddb1-405a-83e9-36ebcb45f46e\",\n            \"customer_id\": \"3706ca57-acd7-4a67-8278-1f2aae6f5896\",\n            \"delivert_partner_id\": null,\n            \"status\": \"TASK_CREATED\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "order status change by driver",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzNzA2Y2E1Ny1hY2Q3LTRhNjctODI3OC0xZjJhYWU2ZjU4OTYiLCJzZXNzaW9uSWQiOiIwOTBiNDIzNS02NDBjLTQ5ZTgtYWM5My01ZTA4NWY5YmFiY2MiLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE2NjI4MDIyMDl9.9hHycd8X53-WUdOJv3WYdW2IxR-LCsv3mt5ZLwLfPiw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\" :\"3112f107-36c9-4dad-9a5e-19467b5fa5d6\",\n    \"orderStatus\" : \"DELIVERED\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/order/changeStatus",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"order",
+								"changeStatus"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "order status change by driver",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"orderId\" :\"3112f107-36c9-4dad-9a5e-19467b5fa5d6\",\n    \"orderStatus\" : \"DELIVERED\" \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/order/changeStatus",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"order",
+										"changeStatus"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14-nLY5TN2lbJ0RL/1ey5x5ICwimMs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 20:15:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "order status changed"
+						}
+					]
+				},
+				{
+					"name": "assignOrder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzNzA2Y2E1Ny1hY2Q3LTRhNjctODI3OC0xZjJhYWU2ZjU4OTYiLCJzZXNzaW9uSWQiOiIwOTBiNDIzNS02NDBjLTQ5ZTgtYWM5My01ZTA4NWY5YmFiY2MiLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE2NjI4MDIyMDl9.9hHycd8X53-WUdOJv3WYdW2IxR-LCsv3mt5ZLwLfPiw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\" :\"3112f107-36c9-4dad-9a5e-19467b5fa5d6\",\n    \"personId\" : \"3706ca57-acd7-4a67-8278-1f2aae6f5896\" \n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/order/assign",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"order",
+								"assign"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"orderId\" :\"3112f107-36c9-4dad-9a5e-19467b5fa5d6\",\n    \"personId\" : \"3706ca57-acd7-4a67-8278-1f2aae6f5896\" \n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/order/assign",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"order",
+										"assign"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "7"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7-U6VofLJtxB8qtAM+l+E63v03QNY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 20:19:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "success"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "delivery",
+			"item": [
+				{
+					"name": "get All  deliveryPerson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzNzA2Y2E1Ny1hY2Q3LTRhNjctODI3OC0xZjJhYWU2ZjU4OTYiLCJzZXNzaW9uSWQiOiIwOTBiNDIzNS02NDBjLTQ5ZTgtYWM5My01ZTA4NWY5YmFiY2MiLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE2NjI4MDIyMDl9.9hHycd8X53-WUdOJv3WYdW2IxR-LCsv3mt5ZLwLfPiw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/delivery",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"delivery"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get All  delivery person",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/driver",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"driver"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "578"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"242-Nq9UXnnLmFRfxEJ5u5GZtpxNWw0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 20:20:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"results\": [\n        {\n            \"user_id\": \"3706ca57-acd7-4a67-8278-1f2aae6f5896\",\n            \"phone\": \"9876543210\",\n            \"role\": \"deliveryPerson\"\n        },\n        {\n            \"user_id\": \"d286811a-19e0-4ac3-9b01-7341973870fd\",\n            \"phone\": \"1245789\",\n            \"role\": \"deliveryPerson\"\n        },\n        {\n            \"user_id\": \"4eaa2f77-b4ed-4585-9177-0781c509d5da\",\n            \"phone\": \"124578789\",\n            \"role\": \"deliveryPerson\"\n        },\n        {\n            \"user_id\": \"15d5bdf3-bd26-4520-bb84-57bd5e49759d\",\n            \"phone\": \"12457872389\",\n            \"role\": \"deliveryPerson\"\n        },\n        {\n            \"user_id\": \"1f6c458b-87b0-4fdf-9aa0-f2c65f028411\",\n            \"phone\": \"12389\",\n            \"role\": \"deliveryPerson\"\n        },\n        {\n            \"user_id\": \"57807565-6d1e-4256-a80b-8459e385de7b\",\n            \"phone\": \"1238923\",\n            \"role\": \"deliveryPerson\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
