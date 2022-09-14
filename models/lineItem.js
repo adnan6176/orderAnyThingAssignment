@@ -44,8 +44,6 @@ const LineItem = db.define('line_items',{
 }
 );
 
-// UserType.sync().then(() => {
-//   console.log('table created');
-// }).catch(()=>{"error creating table"});
+
 
 module.exports = LineItem;

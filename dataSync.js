@@ -2,41 +2,39 @@ const db = require('./config/database');
 const User = require('./models/user');
 const Catalogue = require('./models/catalogue');
 const Cart = require('./models/cart');
-// const UserType = require('./models/usertype')
+const Session = require('./models/session')
 const Order = require('./models/order');
 const Address = require('./models/address');
-const Session = require('./models/session');
 const LineItem = require('./models/lineItem');
-LineItem.sync({alter: true})
-.then((data)=>{
-    console.log(data);
-    console.log("table synced successfully");
-})
-.catch(()=>{
-    console.log("Unsuccessfull sync");
-})
-
-// UserType.sync({alter: true})
-// .then((data)=>{
-//     console.log(data);
-//     console.log("type table synced  successfully");
-// })
-// .catch(()=>{
-//     console.log("Unsuccessfull sync");
-// })
-
-// User.create({ phone : '1234560', password : "123489" })
-// .then(()=>{
-//     console.log('data inserted');
-// })
-// .catch((error)=>{
-//     console.log(error.message);
-//     console.log('data not updated');
-// });
 
 
 
-// // Test DB
-// db.authenticate()
-//   .then(() => console.log('Database connected...'))
-//   .catch(err => console.log('Error: ' + err))
+Catalogue.sync({alter:true})
+.then(()=>{console.log("catalogue table synced")})
+.catch(()=>{console.log("problem catalogue user table")});
+
+Cart.sync({alter:true})
+.then(()=>{console.log("cart table synced")})
+.catch(()=>{console.log("problem syncing cart table")});
+
+Session.sync({alter:true})
+.then(()=>{console.log("sessions table synced")})
+.catch(()=>{console.log("problem syncing sessions table")});
+
+
+Order.sync({alter:true})
+.then(()=>{console.log("orders table synced")})
+.catch(()=>{console.log("problem syncing orders table")});
+
+Address.sync({alter:true})
+.then(()=>{console.log("addresses table synced")})
+.catch(()=>{console.log("problem syncing addresses table")});
+
+LineItem.sync({alter:true})
+.then(()=>{console.log("line_items table synced")})
+.catch(()=>{console.log("problem syncing line_items table")});
+
+User.sync({alter:true})
+.then(()=>{console.log("users table synced")})
+.catch(()=>{console.log("problem syncing user table")});
+

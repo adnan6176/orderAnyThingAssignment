@@ -36,8 +36,6 @@ const Cart = db.define('cart',{
 }
 );
 
-// UserType.sync().then(() => {
-//   console.log('table created');
-// }).catch(()=>{"error creating table"});
+
 
 module.exports = Cart;

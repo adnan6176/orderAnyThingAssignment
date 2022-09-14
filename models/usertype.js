@@ -26,8 +26,6 @@ const UserType = db.define('user_types',{
 }
 );
 
-// UserType.sync().then(() => {
-//   console.log('table created');
-// }).catch(()=>{"error creating table"});
+
 
 module.exports = UserType;

@@ -27,7 +27,4 @@ const Session = db.define('sessions',{
 }
 );
 
-// User.sync().then(() => {
-//   console.log('table created');
-// }).catch(()=>{"error creating table"});
 module.exports = Session;

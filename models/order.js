@@ -30,8 +30,5 @@ const Order = db.define('orders',{
 }
 );
 
-// UserType.sync().then(() => {
-//   console.log('table created');
-// }).catch(()=>{"error creating table"});
 
 module.exports = Order;
